@@ -1,7 +1,6 @@
 package lambdasinaction.chap5;
 import lambdasinaction.chap4.*;
 
-import java.util.stream.*;
 import java.util.*;
 
 import static lambdasinaction.chap4.Dish.menu;
@@ -19,7 +18,7 @@ public class Reducing{
 
         int max = numbers.stream().reduce(0, (a, b) -> Integer.max(a, b));
         System.out.println(max);
-
+        //这里需要说明的是没有种子，没有初始值，可能会返回null，所以是optional
         Optional<Integer> min = numbers.stream().reduce(Integer::min);
         min.ifPresent(System.out::println);
 

@@ -23,6 +23,12 @@ public class Mapping{
                                          .collect(toList());
         System.out.println(wordLengths);
 
+        //测试一下Arrays.stream这个生成的是什么流？
+        words.stream().map(word->word.split(""))
+                .map(Arrays::stream)
+                .distinct()
+                .forEach(a->a.forEach(System.out::println));
+
         // flatMap
         words.stream()
                  .flatMap((String line) -> Arrays.stream(line.split("")))

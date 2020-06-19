@@ -17,6 +17,7 @@ public class ParallelStreams {
     }
 
     public static long parallelSum(long n) {
+        //将串行流转换成并行流
         return Stream.iterate(1L, i -> i + 1).limit(n).parallel().reduce(Long::sum).get();
     }
 
@@ -42,7 +43,7 @@ public class ParallelStreams {
 
     public static class Accumulator {
         private long total = 0;
-
+        //会产生并发错误
         public void add(long value) {
             total += value;
         }

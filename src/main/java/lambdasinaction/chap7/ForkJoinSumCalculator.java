@@ -24,6 +24,10 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long> {
         this.end = end;
     }
 
+    /**
+     * 需要返回Long型，要实现这唯一一个方法
+     * @return
+     */
     @Override
     protected Long compute() {
         int length = end - start;

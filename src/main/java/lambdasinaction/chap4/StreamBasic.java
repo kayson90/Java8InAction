@@ -22,6 +22,7 @@ public class StreamBasic {
     }
 
     public static List<String> getLowCaloricDishesNamesInJava7(List<Dish> dishes){
+        //这里有个垃圾变量
         List<Dish> lowCaloricDishes = new ArrayList<>();
         for(Dish d: dishes){
             if(d.getCalories() < 400){

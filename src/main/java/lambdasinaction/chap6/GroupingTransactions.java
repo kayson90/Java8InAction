@@ -20,6 +20,7 @@ public class GroupingTransactions {
                                                                   new Transaction(Currency.JPY, 5700.0),
                                                                   new Transaction(Currency.EUR, 6800.0) );
     public static void main(String ... args) {
+        //对比分组
         groupImperatively();
         groupFunctionally();
 

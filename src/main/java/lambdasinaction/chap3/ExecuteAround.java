@@ -26,7 +26,14 @@ public class ExecuteAround {
         }
     }
 
-
+	/**
+	 * processFile这个东西也可以模板化，因为行为也就那么几种，所以调用行为的方法也就那么几种。
+	 * 这个过程叫做操作，是java8提供的API
+	 * 当然我们可以自定义函数接口，也可以自定义操作，都没有什么问题
+	 * @param p
+	 * @return
+	 * @throws IOException
+	 */
 	public static String processFile(BufferedReaderProcessor p) throws IOException {
 		try(BufferedReader br = new BufferedReader(new FileReader("lambdasinaction/chap3/data.txt"))){
 			return p.process(br);

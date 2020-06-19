@@ -19,6 +19,7 @@ public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
 
     @Override
     public Function<List<T>, List<T>> finisher() {
+        Function.identity();
         return i -> i;
     }
 
